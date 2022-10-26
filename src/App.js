@@ -1,7 +1,8 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from './Pages/Home.js';
-import Form from './Pages/Form.js';
-import Profile from './Pages/Profile.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Home from './Pages/Home';
+import Form from './Pages/Form';
+import Profile from './Pages/Profile';
 
 function App() {
   return (

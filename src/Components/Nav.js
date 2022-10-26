@@ -1,25 +1,38 @@
 import React from 'react'
-
-export default function Nav({setIsSignUp, isShowModal, setIsShowModal}) {
-    const handleClick = () => {
-        setIsSignUp(true);
-        setIsShowModal(true);
-    }
-
+const Nav = () => {
   return (
-    <nav className='navbar'>
-      <div className='logo--container'>
-        {/* <img className='logo' src='#' alt='Cupid' /> */}
-        <div className='logo'>CUPID</div>
+    <nav>
+      <div className="logo">
+        <h2>Cupid</h2>
       </div>
-      {!isShowModal && 
-      <button 
-        className='btn sign--in'
-        onClick={handleClick}
-      >
-        Already a member?
-      </button>
-      }
+
+      <div className="menu">
+        <ul>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Images</a>
+          </li>
+          <li>
+            <a href="">Gallery</a>
+          </li>
+          <li>
+            <a href="">Contact us</a>
+          </li>
+          <li>
+            <a href="">About us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="active-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-  )
+  );
 }
+
+export default Nav
