@@ -30,6 +30,7 @@ const Nav = () => {
     gap: "50px",
     transition: " 0.5s ease-out",
   };
+  
   return (
     <nav>
       <div className="logo">
