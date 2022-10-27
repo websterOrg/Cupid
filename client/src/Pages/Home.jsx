@@ -10,7 +10,6 @@ const Home = () => {
           src="https://embed.lottiefiles.com/animation/95400"
           className="lottie_gif"
         ></iframe>
-
         {/* ------- NavBar Component -------- */}
         <Nav />
         {/* ------- Home page content wrapper ------- */}
