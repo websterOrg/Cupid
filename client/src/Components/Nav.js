@@ -1,7 +1,12 @@
-import React, { useState,useEffect,useRef } from "react";
-const Nav = () => {
+import React, { useState, useEffect, useRef } from "react";
+const Nav = ({ setShowModal, setIsSignup }) => {
   const [openDrawer, toggleDrawer] = useState(false);
   const drawerRef = useRef(null);
+    const handleClick = () => {
+      console.log("clicked");
+      setIsSignup(false);
+      setShowModal(true);
+    };
 
   useEffect(() => {
     /* Close the drawer when the user clicks outside of it */
@@ -12,25 +17,27 @@ const Nav = () => {
 
       toggleDrawer(false);
     };
+  
+  
 
     document.addEventListener("mousedown", closeDrawer);
     return () => document.removeEventListener("mousedown", closeDrawer);
   }, []);
 
   const DrawerStyle = {
-    background:"white",
+    background: "white",
     position: "fixed",
-    display:"flex",
-    padding:"30px 40px",
+    display: "flex",
+    padding: "30px 40px",
     top: "0",
     right: "0",
     height: "100vh",
-    boxShadow:" rgba(0, 0, 0, 0.24) 0px 3px 8px",
+    boxShadow: " rgba(0, 0, 0, 0.24) 0px 3px 8px",
     flexDirection: "column",
     gap: "50px",
     transition: " 0.5s ease-out",
   };
-  
+
   return (
     <nav>
       <div className="logo">
@@ -38,21 +45,26 @@ const Nav = () => {
       </div>
 
       <div className="menu">
-        <ul ref={drawerRef}  style={openDrawer ? DrawerStyle : null}>
+        <ul ref={drawerRef} style={openDrawer ? DrawerStyle : null}>
           <li>
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">Images</a>
+            <a href="">Pricing</a>
           </li>
           <li>
-            <a href="">Gallery</a>
+            <a href="">Support</a>
+          </li>
+          <li>
+            <a href="">Download</a>
           </li>
           <li>
             <a href="">Contact us</a>
           </li>
           <li>
-            <a href="">About us</a>
+            <button className="login-btn" onClick={handleClick}>
+              Login
+            </button>
           </li>
         </ul>
       </div>
