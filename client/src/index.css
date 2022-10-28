@@ -38,18 +38,19 @@ nav {
 }
 .menu ul {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
 }
 .menu ul li a {
   color: var(--secondary-color);
   padding: 8px 15px;
   border-radius: 15px;
-  transition: all 0.3s;
 }
 .menu ul li a:hover {
-  background-color: var(--secondary-color);
-  color: white;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
+/* Toggle bar  */
 .active-bar {
   display: none;
   flex-direction: column;
@@ -83,7 +84,7 @@ nav {
 .home--container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   margin-top: 120px;
 }
 .text-box h1 {
@@ -95,24 +96,30 @@ nav {
   text-align: center;
   line-height: 1.2;
 }
-.button-box button {
+.register-btn,
+.login-btn {
   padding: 10px 25px;
-  margin: 0 10px;
   cursor: pointer;
   border: none;
   border-radius: 15px;
   color: white;
   letter-spacing: 1px;
   transition: all 0.3s;
-}
-.button-box button:hover {
-  transform: scale(1.1);
+  font-weight: 600;
 }
 .register-btn {
-  background-color: var(--secondary-color);
+  padding: 12px 25px;
+  background-color: var(--primary-color);
 }
 .login-btn {
-  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  margin-left: 10px;
+}
+.login-btn:hover,
+.register-btn:hover {
+  transform: scale(1.1);
 }
 .lottie_gif {
   width: 100vw;
@@ -165,11 +172,20 @@ nav {
 }
 
 /**************Start Register and Signup Popup Modal**********/
+.outside-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10; 
+}
 .modal-container {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -177,7 +193,7 @@ nav {
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   font-family: "Mukta", sans-serif;
-  z-index: 10;
+  background-color: white;
 }
 .modal-container .side-box {
   width: 285px;
@@ -192,6 +208,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  user-select: none;
 }
 .modal-container .form-container {
   display: flex;
@@ -258,13 +275,15 @@ nav {
 }
 .cross-icon {
   position: absolute;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   cursor: pointer !important;
   z-index: 5;
   font-size: 22px;
 }
 .cross-icon:hover {
   opacity: 0.7;
+  transform: rotate(30deg);
+  transition: 0.2s;
 }
 .term-condition {
   font-size: 14px;
