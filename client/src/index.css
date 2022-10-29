@@ -145,14 +145,34 @@ nav {
 .form--container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
-  /* border: 3px solid red; */
+}
+
+.form--header {
+  /* border: 2px solid red; */
+  padding-bottom: 10px;
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  background-color: #ff725e;
+}
+
+.back-icon {
+  margin-right: 13px;
 }
 
 .form--body {
+  display: flex;
+  flex: 10;
+  justify-content: center;
+  align-items: flex-start;
   margin: 10px;
+  width: 100%;
+  /* border: 3px solid red; */
 }
 
 .gender--options {
@@ -161,14 +181,25 @@ nav {
   display: flex;
   flex-wrap: wrap;
   max-width: 30vw;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .more--options {
   /* border: 2px solid red; */
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
+}
+
+.options, .show-btn {
+  outline: none;
+  border: none;
+  background-color: #ff725e;
+  color: #f7f8f9;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 /**************Start Register and Signup Popup Modal**********/
