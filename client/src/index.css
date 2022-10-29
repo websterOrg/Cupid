@@ -279,11 +279,12 @@ nav {
   cursor: pointer !important;
   z-index: 5;
   font-size: 22px;
+  transition: 0.2s;
 }
 .cross-icon:hover {
   opacity: 0.7;
-  transform: rotate(30deg);
-  transition: 0.2s;
+  transform: rotate(90deg);
+
 }
 .term-condition {
   font-size: 14px;
