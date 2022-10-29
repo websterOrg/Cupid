@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import './styles/nav.css'
 const Nav = ({ setShowModal, setIsSignup }) => {
   const [openDrawer, toggleDrawer] = useState(false);
   const drawerRef = useRef(null);

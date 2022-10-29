@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles/home.css";
 import Nav from "../Components/Nav";
 import Modalpopup from "../Components/Modalpopup";
 import Footer from "./Footer";

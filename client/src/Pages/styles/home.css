@@ -1,0 +1,57 @@
+
+/* ----------Home----------- */
+.home {
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.home--container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 120px;
+}
+.text-box h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+.text-box p {
+  color: var(--secondary-color);
+  text-align: center;
+  line-height: 1.2;
+}
+.register-btn,
+.login-btn {
+  padding: 10px 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.register-btn {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+}
+.login-btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  margin-left: 10px;
+}
+.login-btn:hover,
+.register-btn:hover {
+  transform: scale(1.1);
+}
+.lottie_gif {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  border: none;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
