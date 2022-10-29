@@ -1,0 +1,45 @@
+/* ---------NavBar---------- */
+nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.menu ul li a {
+  color: var(--secondary-color);
+  padding: 8px 15px;
+  border-radius: 15px;
+}
+.menu ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+/* Toggle bar  */
+.active-bar {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  justify-content: center;
+}
+.active-bar > span {
+  width: 20px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+/* ---------Media Query for navbar when screen size less than 768px ------- */
+@media screen and (max-width: 767px) {
+  .active-bar {
+    display: flex;
+  }
+  .menu ul {
+    display: none;
+  }
+}

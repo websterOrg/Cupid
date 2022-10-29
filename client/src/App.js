@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from './Pages/Home';
-import Form from './Pages/Form';
-import Profile from './Pages/Profile';
-import Modalpopup from './Components/Modalpopup';
+import Home from "./Pages/Home";
+import Form from "./Pages/Form";
+import Profile from "./Pages/Profile";
+import Modalpopup from "./Components/Modalpopup";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/modalpopup" element={<Modalpopup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
