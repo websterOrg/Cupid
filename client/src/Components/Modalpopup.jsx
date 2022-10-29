@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
@@ -7,7 +8,9 @@ const Modalpopup = ({ setShowModal, isSignup, setIsSignup }) => {
   const handleClick = () => {
     setShowModal(false);
   };
- 
+  
+  let navigate = useNavigate();
+
   return (
     <>
       <div className="outside-container">
@@ -95,7 +98,7 @@ const Modalpopup = ({ setShowModal, isSignup, setIsSignup }) => {
                 </div>
               )}
 
-              <input type="submit" />
+              <input type="submit" onClick={ () => { if(isSignup) navigate('/Form')} } />
             </form>
           </div>
         </div>
